@@ -42,32 +42,32 @@ Install yetiproof:
 Example output (we are time stamping the python script itself):
 
 ```
-$ ./yetiproof.py -f yetiproof.py --stamp --wallet /home/yetiproof/.electrum/wallets/timestampingfunds
-yetiproof 0.01
-File(s) to be hashed by sha256:
+$ ./yetiproof.py -f yetiproof.py --stamp --burn --wallet /home/yetiproof/.electrum/wallets/timestampingfunds
+yetiproof 0.02
+Starting electrum ...
+starting daemon (PID 12414)
+File(s) to be hashed by sha256*:
+yetiproof.py b8a858ade9328c224a12c484a8ff7fa3d85bebde6d83ae9e8b0aa15df5391a62
+8248 Bytes processed
+*sha256 refers to SHA-2/Secure Hash Algorithm 2, NIST Standard FIPS PUB 180-2
 
-yetiproof.py
-
-[sha256 refers to SHA-2/Secure Hash Algorithm 2, NIST Standard FIPS PUB 180-2]
-sha256 hash value (hex)      = e4ae1fbc0bd41a0600aadb767fb6b4adad841961ad1a337da4d3fb701ba2bb71
-... is used as private key ...
-Bitcoin private key (hex)    = e4ae1fbc0bd41a0600aadb767fb6b4adad841961ad1a337da4d3fb701ba2bb71
-Bitcoin private key (Base58) = 5KYzui4dHRTdDxZLcDxogY6wHuMTvr8fUchSkKuJpkVVG39oMsi
-... deriving Bitcoin address form pivate key ...
-Bitcoin Address (Base 58)    = 16nZUmSqYvuFegep5ZZzYb23QC4yc2WyT
-Link to check address: https://blockchain.info/address/16nZUmSqYvuFegep5ZZzYb23QC4yc2WyT
-0.000100 BTC will be transmitted to Bitcoin address 16nZUmSqYvuFegep5ZZzYb23QC4yc2WyT as proof of existence of file(s):
-
-yetiproof.py
-
-on 2016.04.12-20:07:04 UTC
+sha256 hash value (hex)      = b8a858ade9328c224a12c484a8ff7fa3d85bebde6d83ae9e8b0aa15df5391a62
+... is used as public key ...
+Bitcoin Address (Base 58)    = 16LP3pk1GnYXxyjBmWPK26QPifYcF4E4xa
+Link to check address: https://blockchain.info/address/16LP3pk1GnYXxyjBmWPK26QPifYcF4E4xa
+0.000100 BTC will be transmitted to Bitcoin address 16LP3pk1GnYXxyjBmWPK26QPifYcF4E4xa
+as proof of existence of above file(s) on 2016.04.26-02:39:24 UTC.
 Preparing transaction...
-Do you really want to transmit 0.000100 BTC to 16nZUmSqYvuFegep5ZZzYb23QC4yc2WyT ? y/n: y
+Do you really want to transmit 0.000100 BTC to 16LP3pk1GnYXxyjBmWPK26QPifYcF4E4xa (WARNING - funds will be BURNED!) ? y/n: y
 Password:
-Link to check transaction: https://blockchain.info/tx/182cdb6380d6650d5a1adaf8793b7eb7815eb480f85bbd82ea46f3ef7398f6cc
-Command for reproducing: ./yetiproof.py -f yetiproof.py
-Files were archived into PoE-UTC=2016.04.12-20:07:04-BTC-addr=16nZUmSqYvuFegep5ZZzYb23QC4yc2WyT.zip
-16nZUmSqYvuFegep5ZZzYb23QC4yc2WyT
+Link to check transaction: https://blockchain.info/tx/91d2970e44142d9ab6e248c02c70838378296a372d3d8f2d9a09de00e88b26a9
+Command for reproducing:
+./yetiproof.py --burn -f yetiproof.py
+Creating zip archive ...
+
+Files were archived into PoE-UTC=2016.04.26-02:39:24-BTC-addr=16LP3pk1GnYXxyjBmWPK26QPifYcF4E4xa.zip
+16LP3pk1GnYXxyjBmWPK26QPifYcF4E4xa
+$
 ```
 
 Follow the links in order to verify the time stamp transaction. 
